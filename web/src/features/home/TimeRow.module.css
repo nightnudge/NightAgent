@@ -1,0 +1,32 @@
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: var(--night-text-secondary);
+}
+
+.time {
+  font-family: var(--font-rounded);
+  font-size: 19px;
+  font-weight: var(--fw-medium);
+  color: var(--night-text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.label {
+  font-family: var(--font-rounded);
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.arrow {
+  color: rgba(var(--night-text-secondary-rgb), 0.35);
+}

@@ -1,0 +1,21 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding-top: max(56px, calc(var(--safe-top) + 24px));
+  padding-bottom: max(36px, var(--safe-bottom));
+}
+
+.pager {
+  display: flex;
+  flex: 1;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  margin-top: 16px;
+}
+
+.footer {
+  padding: 12px 28px 0;
+}

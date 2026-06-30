@@ -1,0 +1,29 @@
+.track {
+  position: relative;
+  width: 48px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background: rgba(var(--night-text-secondary-rgb), 0.25);
+  transition: background-color 0.2s var(--ease-standard);
+}
+
+.track[data-on] {
+  background: var(--night-status-green);
+}
+
+.thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s var(--ease-spring);
+}
+
+.track[data-on] .thumb {
+  transform: translateX(20px);
+}

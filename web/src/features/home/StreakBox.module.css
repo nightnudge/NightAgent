@@ -1,0 +1,29 @@
+.box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: rgba(var(--night-bg-secondary-rgb), 0.6);
+  border-radius: var(--radius-sm);
+  border: 1.8px solid transparent;
+  transition: border-color 0.3s var(--ease-standard), box-shadow 0.3s var(--ease-standard);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.caption {
+  font-family: var(--font-rounded);
+  font-size: 12px;
+  color: var(--night-text-secondary);
+}
+
+.value {
+  font-family: var(--font-rounded);
+  font-size: 16.5px;
+  font-weight: var(--fw-semibold);
+  color: var(--night-text-primary);
+}

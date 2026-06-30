@@ -1,0 +1,23 @@
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.dot,
+.dotActive {
+  height: 7px;
+  border-radius: 4px;
+  transition: width 0.3s var(--ease-spring), background-color 0.3s var(--ease-standard);
+}
+
+.dot {
+  width: 7px;
+  background: rgba(var(--night-text-secondary-rgb), 0.25);
+}
+
+.dotActive {
+  width: 20px;
+  background: var(--night-accent-glow);
+}

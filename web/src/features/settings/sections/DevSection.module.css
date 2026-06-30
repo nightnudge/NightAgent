@@ -1,0 +1,20 @@
+.bump,
+.reset {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  padding: 0 16px;
+  text-align: left;
+  font-family: var(--font-rounded);
+  font-size: 14.5px;
+  border-bottom: 1px solid rgba(var(--night-bg-primary-rgb), 0.5);
+}
+
+.bump {
+  color: var(--streak-gold);
+}
+
+.reset {
+  color: var(--night-status-red);
+  border-bottom: none;
+}

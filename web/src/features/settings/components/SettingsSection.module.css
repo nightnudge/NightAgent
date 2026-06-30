@@ -1,0 +1,28 @@
+.section {
+  margin-bottom: 28px;
+}
+
+.header {
+  font-family: var(--font-rounded);
+  font-size: 12.5px;
+  font-weight: var(--fw-medium);
+  color: var(--night-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0 16px;
+  margin-bottom: 8px;
+}
+
+.card {
+  background: rgba(var(--night-bg-secondary-rgb), 0.6);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.footer {
+  font-family: var(--font-rounded);
+  font-size: 12px;
+  line-height: 1.45;
+  color: rgba(var(--night-text-secondary-rgb), 0.7);
+  padding: 8px 16px 0;
+}

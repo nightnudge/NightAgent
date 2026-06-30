@@ -1,0 +1,21 @@
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: var(--night-bg-primary);
+  overflow: hidden;
+}
+
+.glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 840px;
+  height: 420px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgba(var(--night-accent-glow-rgb), 0.08) 0%,
+    rgba(var(--night-accent-glow-rgb), 0) 70%
+  );
+}

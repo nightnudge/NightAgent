@@ -1,0 +1,65 @@
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 50px;
+  padding: 0 16px;
+  border-bottom: 1px solid rgba(var(--night-bg-primary-rgb), 0.5);
+}
+
+.label {
+  font-family: var(--font-rounded);
+  font-size: 15px;
+  color: var(--night-text-primary);
+}
+
+.value {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-rounded);
+  font-size: 14.5px;
+  color: var(--night-text-secondary);
+}
+
+.chevron,
+.chevronOpen {
+  transition: transform 0.25s var(--ease-standard);
+  color: rgba(var(--night-text-secondary-rgb), 0.6);
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.options {
+  padding: 4px 0 8px;
+  border-bottom: 1px solid rgba(var(--night-bg-primary-rgb), 0.5);
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 40px;
+  padding: 6px 16px 6px 28px;
+}
+
+.optionLabel {
+  font-family: var(--font-rounded);
+  font-size: 14px;
+  color: var(--night-text-secondary);
+}
+
+.optionLabelSelected {
+  font-family: var(--font-rounded);
+  font-size: 14px;
+  font-weight: var(--fw-medium);
+  color: var(--night-text-primary);
+}
+
+.check {
+  color: var(--night-accent-glow);
+}

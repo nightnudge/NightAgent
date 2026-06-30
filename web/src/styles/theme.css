@@ -1,0 +1,55 @@
+/* Design tokens ported 1:1 from NightAgent/NightColors.swift */
+:root {
+  /* Backgrounds */
+  --night-bg-primary: #0a1f0f;
+  --night-bg-primary-rgb: 10, 31, 15;
+  --night-bg-secondary: #122b17;
+  --night-bg-secondary-rgb: 18, 43, 23;
+
+  /* Accents */
+  --night-accent: #1a4d2e;
+  --night-accent-rgb: 26, 77, 46;
+  --night-accent-glow: #2e7d4f;
+  --night-accent-glow-rgb: 46, 125, 79;
+
+  /* Text */
+  --night-text-primary: #e8f5e9;
+  --night-text-primary-rgb: 232, 245, 233;
+  --night-text-secondary: #81c784;
+  --night-text-secondary-rgb: 129, 199, 132;
+
+  /* Status */
+  --night-status-green: #4caf50;
+  --night-status-green-rgb: 76, 175, 80;
+  --night-status-yellow: #ffd54f;
+  --night-status-yellow-rgb: 255, 213, 79;
+  --night-status-red: #ef5350;
+  --night-status-red-rgb: 239, 83, 80;
+
+  /* Streak tiers */
+  --streak-gold: #ffc83d;
+  --streak-platinum: #d8dee9;
+  --streak-ruby: #e0115f;
+  --streak-diamond: #8fe7ff;
+
+  /* Typography */
+  --font-rounded: 'Nunito Variable', -apple-system, BlinkMacSystemFont, 'SF Pro Rounded', system-ui,
+    sans-serif;
+  --fw-thin: 240;
+  --fw-light: 320;
+  --fw-regular: 420;
+  --fw-medium: 600;
+  --fw-semibold: 760;
+
+  /* Shape & motion */
+  --radius-sm: 12px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Layout */
+  --app-max-width: 480px;
+
+  color-scheme: dark;
+}

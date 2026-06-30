@@ -1,0 +1,27 @@
+.wrapper {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.moon {
+  width: 88vh;
+  height: 88vh;
+  max-width: 130vw;
+  color: rgba(var(--night-accent-glow-rgb), 0.13);
+  animation: rotate 160s linear infinite;
+  will-change: transform;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

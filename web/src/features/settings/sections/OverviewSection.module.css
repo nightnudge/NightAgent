@@ -1,0 +1,25 @@
+.value {
+  font-family: var(--font-rounded);
+  font-size: 15px;
+  color: var(--night-text-secondary);
+}
+
+.widgetRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 50px;
+  padding: 0 16px;
+  border-top: 1px solid rgba(var(--night-bg-primary-rgb), 0.5);
+}
+
+.widgetLabel {
+  font-family: var(--font-rounded);
+  font-size: 15px;
+  color: var(--night-text-primary);
+}
+
+.chevron {
+  color: rgba(var(--night-text-secondary-rgb), 0.6);
+}

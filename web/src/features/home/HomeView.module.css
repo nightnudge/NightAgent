@@ -1,0 +1,50 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  padding-top: max(20px, calc(var(--safe-top) + 8px));
+}
+
+.title {
+  font-family: var(--font-rounded);
+  font-size: 21px;
+  font-weight: var(--fw-semibold);
+  color: var(--night-text-primary);
+}
+
+.settingsButton {
+  display: flex;
+  color: var(--night-text-secondary);
+  transition: opacity 0.2s;
+}
+
+.settingsButton:active {
+  opacity: 0.6;
+}
+
+.streakWrap {
+  padding: 0 28px;
+  margin-top: 18px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.confirmWrap {
+  padding: 0 28px;
+  margin-bottom: 16px;
+}
+
+.timeWrap {
+  padding: 0 28px;
+  margin-bottom: max(44px, calc(var(--safe-bottom) + 20px));
+}

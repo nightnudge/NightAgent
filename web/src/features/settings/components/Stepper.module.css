@@ -1,0 +1,32 @@
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.value {
+  font-family: var(--font-rounded);
+  font-size: 13.5px;
+  color: var(--night-text-secondary);
+  white-space: nowrap;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(var(--night-accent-glow-rgb), 0.18);
+  color: var(--night-accent-glow);
+}
+
+.button:disabled {
+  opacity: 0.3;
+}
+
+.button:active:not(:disabled) {
+  background: rgba(var(--night-accent-glow-rgb), 0.32);
+}
