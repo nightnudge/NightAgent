@@ -20,6 +20,31 @@ self.addEventListener('install', () => {
   void self.skipWaiting()
 })
 
+/**
+ * Receives a push from the server and shows the notification.
+ * Payload shape: { title, body, tag, icon }
+ */
+self.addEventListener('push', (event) => {
+  if (!event.data) return
+
+  const { title, body, tag, icon } = event.data.json() as {
+    title: string
+    body: string
+    tag?: string
+    icon?: string
+  }
+
+  event.waitUntil(
+    self.registration.showNotification(title, {
+      body,
+      icon: icon ?? `${base}icons/icon-192.png`,
+      badge: `${base}icons/icon-192.png`,
+      tag,
+      data: { url: base },
+    } as NotificationOptions),
+  )
+})
+
 self.addEventListener('activate', (event) => {
   event.waitUntil(self.clients.claim())
 })

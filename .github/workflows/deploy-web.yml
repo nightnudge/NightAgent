@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'web/**'
+      - 'push-server/**'
       - '.github/workflows/deploy-web.yml'
   workflow_dispatch:
 
@@ -38,6 +39,7 @@ jobs:
         run: npm run build
         env:
           GITHUB_PAGES: 'true'
+          VITE_PUSH_SERVER_URL: ${{ secrets.VITE_PUSH_SERVER_URL }}
 
       - uses: actions/configure-pages@v5
 
