@@ -32,3 +32,19 @@
 .addButton:active {
   background: rgba(var(--night-accent-glow-rgb), 0.1);
 }
+
+.testButton {
+  display: block;
+  width: 100%;
+  min-height: 46px;
+  font-family: var(--font-rounded);
+  font-size: 14.5px;
+  font-weight: var(--fw-medium);
+  color: var(--night-text-secondary);
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.testButton:active {
+  background: rgba(255, 255, 255, 0.06);
+}

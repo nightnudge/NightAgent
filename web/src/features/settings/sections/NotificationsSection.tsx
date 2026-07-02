@@ -1,6 +1,7 @@
+import { useState } from 'react'
 import { X } from 'lucide-react'
 import { useSettings } from '../../../store/useSettings'
-import { requestNotificationPermission } from '../../../services/showNotification'
+import { requestNotificationPermission, showLocalNotification } from '../../../services/showNotification'
 import { Switch } from '../../../components/Switch/Switch'
 import { SettingsSection } from '../components/SettingsSection'
 import { SettingsRow } from '../components/SettingsRow'
@@ -12,6 +13,21 @@ const MAX_REMINDERS = 4
 export function NotificationsSection() {
   const { notificationsEnabled, setNotificationsEnabled, reminderOffsets, setReminderOffsets } =
     useSettings()
+  const [testState, setTestState] = useState<'idle' | 'sent' | 'error'>('idle')
+
+  const sendTestNotification = async () => {
+    try {
+      await showLocalNotification(
+        'Test-Benachrichtigung 🌙',
+        'NightNudge-Benachrichtigungen funktionieren.',
+        { tag: 'test' },
+      )
+      setTestState('sent')
+    } catch {
+      setTestState('error')
+    }
+    setTimeout(() => setTestState('idle'), 3000)
+  }
 
   const handleToggle = async (enabled: boolean) => {
     if (!enabled) {
@@ -78,6 +94,12 @@ export function NotificationsSection() {
       {notificationsEnabled && reminderOffsets.length < MAX_REMINDERS && (
         <button type="button" className={styles.addButton} onClick={addOffset}>
           + Erinnerung hinzufügen
+        </button>
+      )}
+
+      {notificationsEnabled && (
+        <button type="button" className={styles.testButton} onClick={sendTestNotification}>
+          {testState === 'sent' ? '✓ Gesendet' : testState === 'error' ? '✗ Fehler' : 'Test-Benachrichtigung senden'}
         </button>
       )}
     </SettingsSection>
